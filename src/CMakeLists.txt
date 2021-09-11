@@ -1,3 +1,5 @@
+add_subdirectory(logic)
+
 file(GLOB cxx_sources RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.cpp)
 
 add_executable(main ${cxx_sources})
