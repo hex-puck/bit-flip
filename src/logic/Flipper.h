@@ -11,7 +11,12 @@ public:
   explicit Flipper(const path_type &inPath, const path_type &outPath,
                    std::size_t bufferSize);
 
+  void operator()() const;
+
 private:
+  void flipRegular() const;
+  void flipDirectory() const;
+
   const path_type _inPath;
   const path_type _outPath;
   const std::size_t _bufferSize;
